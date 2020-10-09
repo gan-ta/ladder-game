@@ -1,0 +1,257 @@
+/*{outline: solid 1px;}
+   {box-sizing: border-box;} */
+
+
+.wrap {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+@media all and (min-width: 360px) {
+    #invisible {
+        visibility: hidden
+    }
+
+    .wrap .img_list ul {
+        list-style-type: none;
+        display: flex;
+        padding-top: 3%;
+        margin: auto;
+        padding-left: 0;
+    }
+
+    .wrap .img_list ul li {
+        flex: 4;
+        text-align: center;
+    }
+
+    .wrap .img_list ul li img {
+        width: 80%
+    }
+
+
+    .wrap .button {
+        margin-top: 25%;
+        margin-bottom: 25%;
+        text-align: center;
+    }
+
+    .wrap .button span {
+        border: 1px solid #666;
+        padding: 2%;
+        border-radius: 4%;
+        font-size: 1.5em;
+        box-shadow: #666 2.5px 3px;
+        font-family: 'Jua', sans-serif;
+        color: #666;
+    }
+
+
+    .button_list ul {
+        list-style-type: none;
+        display: flex;
+        margin: auto;
+        width: 100%;
+    }
+
+    .button_list ul li {
+        text-align: center;
+        border: 2px solid #666;
+        width: 20%;
+        border-radius: 50%;
+        line-height: 6;
+        font-size: 3vw;
+        font-family: 'Jua', sans-serif;
+        font-weight: bold;
+        color: #666;
+        justify-content: space-around;
+        margin: 2%;
+    }
+
+    /*input 태그로 수정하여 작업을 진행함 */
+    .button_text:hover {
+        background-color: #ff9999;
+    }
+
+    .button_text {
+        width: 20%;
+        border: 1px solid;
+        line-height: 3;
+    }
+
+
+    .ladder_paper {
+        width: 93%;
+        height: 100%;
+        display: flex;
+        position: relative;
+    }
+
+    .textbox {
+        margin-top: 12%;
+    }
+
+    .textbox li {
+        font-family: 'Jua', sans-serif;
+        font-weight: bold;
+        color: #666;
+    }
+
+    .textbox .text {
+        flex: 2;
+        display: flex;
+        margin-bottom: -2%;
+    }
+
+    .textbox .text p {
+        font-family: 'Jua', sans-serif;
+    }
+
+    .textbox .text .rere_01 {
+        font-size: 1.5rem;
+        padding-left: 3.5%;
+        width: 30%;
+        text-align: left;
+        color: #333;
+    }
+
+    .textbox .text .rere {
+        margin-left: 1%;
+        padding: 1%;
+        border: 1px solid #999;
+        border-radius: 3%;
+        margin-left: 42%;
+        width: 20%;
+        text-align: center;
+        font-size: 1rem;
+        color: #666;
+        height: 12%;
+        box-shadow: #999 2.5px 3px;
+    }
+
+    .textbox .text .rere:hover {
+        background-color: #66cc99;
+    }
+
+
+    .textbox .text_box01 {
+        display: flex;
+        list-style-type: none;
+        margin-bottom: 5%;
+        padding-left: 0;
+        text-align: center;
+        margin-top: 5%
+    }
+
+    .textbox .text_box01 .box01 {
+        flex: 2;
+    }
+
+    .textbox .text_box01 .box02 {
+        flex: 2;
+        font-family: 'Jua', sans-serif;
+        text-align: -moz-center;
+    }
+
+    .textbox .text_box02 {
+        display: flex;
+        list-style-type: none;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .textbox .text_box02 .box03 {
+        flex: 2;
+        font-family: 'Jua', sans-serif;
+        text-align: -moz-center;
+    }
+
+    .textbox .text_box02 .box04 {
+        flex: 2;
+        font-family: 'Jua', sans-serif;
+        text-align: -moz-center;
+    }
+
+
+    /*.textbox_box{width: 90%; height: auto; padding-left: 5%}*/
+    input {
+        width: 80%;
+        height: 150%;
+        border: dashed 1px #666;
+        border-radius: 3%;
+    }
+
+    .wrap .footer {
+        text-align: center;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        font-size: 0.8rem;
+        color: #666;
+    }
+
+    .wrap .icon .icon_ul {
+        list-style-type: none;
+        margin-top: 5%;
+        height: 2px
+    }
+
+    .wrap .icon .description_ul {
+        list-style-type: none;
+    }
+
+    .wrap .icon img {
+        width: 4vw;
+    }
+
+    .wrap .icon ul li {
+        display: inline;
+        padding-right: 2%
+    }
+
+    .icon_05 {
+        font-size: 5vw;
+        color: #666;
+        font-family: 'Jua', sans-serif;
+    }
+
+    .icon {
+        background: #ffffff;
+        width: 160px;
+        font-size: 3vw;
+    }
+
+    .icon ul {
+        padding-bottom: 3%
+    }
+
+    .icon ul {
+        padding-left: 0;
+    }
+
+    .icon_description {
+        font-size: 1vw;
+        color: #666;
+        font-family: 'Jua', sans-serif;
+    }
+
+    .wrap .button_next {
+        text-align: center;
+        margin-bottom: 20%
+    }
+
+    .wrap .button_next span {
+        border: 1px solid #666;
+        padding: 1%;
+        border-radius: 4%;
+        font-size: 1vw;
+        box-shadow: #666 2.5px 1px;
+        font-family: 'Jua', sans-serif;
+        color: #666;
+    }
+
+    .button_text_next:hover {
+        background-color: #ffcc00;
+    }
+
+}
