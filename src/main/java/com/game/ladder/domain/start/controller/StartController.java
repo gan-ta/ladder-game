@@ -1,4 +1,4 @@
-package com.game.ladder.start.controller;
+package com.game.ladder.domain.start.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 public class StartController {
 
     @GetMapping("/")
-    public String getStartProject(HttpServletRequest request){
+    public String getStartProject(){
         return "gamestart_activity";
     }
 
     @PostMapping("/")
-    public String postStartProject(HttpServletRequest request){
+    public String postStartProject(){
         return "gamestart_activity";
     }
 }

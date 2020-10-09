@@ -1,4 +1,4 @@
-package com.game.ladder.setting.controller;
+package com.game.ladder.domain.setting.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,10 +21,10 @@ public class SettingController {
 
     @PostMapping("/start/setting")
     @ResponseBody
-    public int countUser(@RequestParam("userNum") int userNum,HttpServletRequest request){
+    public int countUser(@RequestParam("userCount") String userCount,HttpServletRequest request){
         HttpSession session = request.getSession();
-        session.setAttribute("memberNum",userNum);
+        session.setAttribute("userCount",userCount);
 
-        return (int)session.getAttribute("memberNum");
+        return Integer.parseInt(userCount);
     }
 }
