@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" content="text/html; charset=UTF-8">
+    <title>사다리 타기 게임</title>
+    <!--    추가로 넣어준 사항-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimun-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <style>
+        .wrap{width: 90%; height: 90%; margin: auto;}
+        @media all and (min-width:360px) {
+            #invisible{visibility:hidden}
+
+            .wrap .img_list ul{list-style-type: none; display: flex;
+                padding-top: 5%; margin: auto; padding-left: 0;}
+            .wrap .img_list ul li{flex: 4; text-align: center;}
+
+            .wrap .img_list ul li img{width: 80%}
+
+
+            .wrap .button{margin-top: 25%; margin-bottom: 25%; text-align: center;}
+            .wrap .button span{border: 1px solid #666; padding: 2%; border-radius: 4%; font-size:1.5em; box-shadow: #666 2.5px 3px; font-family: 'Jua', sans-serif; color: #666; }
+
+
+            .button_list ul{list-style-type: none; display: flex;
+                margin: auto; width: 100%;}
+            .button_list ul li{ text-align: center; border: 2px solid #666; width: 20%; border-radius:50%;  line-height:6; font-size: 3vw; font-family: 'Jua', sans-serif; font-weight: bold; color: #666; justify-content: space-around; margin: 2%;}
+
+            /*input 태그로 수정하여 작업을 진행함 */
+            .button_text:hover{background-color: #ff9999;}
+            .button_text{ width: 20%; border: 1px solid; line-height: 3;}
+
+
+            .ladder_paper{
+                width:93%;
+                height:100%;
+                display: flex;
+                position: relative;
+            }
+            .textbox{margin-top: 12%;}
+            .textbox li{font-family: 'Jua', sans-serif; font-weight: bold; color:#666; }
+            .textbox .text{flex: 2; display: flex; margin-bottom: -2%; }
+            .textbox .text p{font-family: 'Jua', sans-serif;}
+            .textbox .text .rere_01{ font-size: 1.5rem; padding-left: 3.5%; width: 30%; text-align:left; color:#333;}
+            .textbox .text .rere{ margin-left: 1%; padding: 1%; border: 1px solid #999; border-radius: 3%; margin-left: 42%; width: 20%; text-align: center;
+                font-size: 1rem;color: #666; height: 12%; box-shadow: #999 2.5px 3px;}
+
+            .textbox .text .rere:hover{background-color: #66cc99;}
+
+
+            .textbox .text_box01{display: flex; list-style-type: none; margin-bottom: 5%;
+                padding-left: 0; text-align: center;margin-top: 5%}
+            .textbox .text_box01 .box01{flex: 2;}
+            .textbox .text_box01 .box02{flex: 2; font-family: 'Jua', sans-serif; text-align: -moz-center;}
+            .textbox .text_box02{display: flex; list-style-type: none; padding-left: 0;
+                text-align: center;}
+            .textbox .text_box02 .box03{flex: 2; font-family: 'Jua', sans-serif; text-align: -moz-center;}
+            .textbox .text_box02 .box04{flex: 2; font-family: 'Jua', sans-serif; text-align: -moz-center;}
+
+
+            /*.textbox_box{width: 90%; height: auto; padding-left: 5%}*/
+            input{width: 80%; height: 150%; border: dashed 1px #666; border-radius: 3%;}
+            .wrap .footer{text-align: center; padding-top: 1%;padding-bottom: 1%; font-size: 0.8rem; color: #666;}
+
+            .wrap .icon .icon_ul{list-style-type: none;margin-top: 5%; height: 100px; margin-bottom: 5%; width: 500px}
+            .wrap .icon .description_ul{list-style-type: none; }
+            .wrap .icon img{width: 4vw;}
+            .wrap .icon ul li{display: inline; padding-right: 2%}
+            .icon_05{font-size: 5vw; color: #666; font-family: 'Jua', sans-serif;}
+
+            .icon {background: #ffffff; width: 160px; font-size: 3vw;height: 50px}
+            .icon ul{padding-bottom: 3%}
+            .icon ul{padding-left: 0;}
+            .icon_description{font-size: 1vw; color: #666; font-family: 'Jua', sans-serif;}
+            .wrap .button_next{text-align: center; margin-bottom: 20%}
+            .wrap .button_next span{border: 1px solid #666; padding: 1%; border-radius: 4%; font-size:1vw;box-shadow: #666 2.5px 1px; font-family: 'Jua', sans-serif; color: #666; }
+            .button_text_next:hover{background-color: #ffcc00;}
+
+        }
+
+        input {
+            font-family: 'Jua', sans-serif;
+            color: #666;
+            border: solid 2px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+
+<form action="/start/next" method="post">
+    <div class="wrap">
+        <div class="icon">
+            <ul class="icon_ul">
+                <li><img src="img/icon_01.png" class="plus" id="btn1"></li>
+                <li class="icon_05" id="num_name">4</li>
+                <li><img src="img/icon_02.png" class="minus" id="btn2"></li>
+            </ul>
+        </div>
+
+        <div class="img_list">
+            <ul class="img_list_ul" id="animal_image">
+                <li><img src="img/1.png" alt="" id="img1" class="img1"></li>
+                <li><img src="img/2.png" alt="" id="img2" class="img2"></li>
+                <li><img src="img/3.png" alt="" id="img3" class="img3"></li>
+                <li><img src="img/4.png" alt="" id="img4" class="img4"></li>
+            </ul>
+
+
+            <div id="invisible" style="display:none">
+                <input id="userCount" name="userCount" type="text"/>
+            </div>
+
+            <div class="ladder" id="ladder_body">
+                <div class="button">
+                    <span class="button_text">START</span>
+                </div>
+            </div>
+
+
+            <div class="button_list">
+                <ul id="destination_list">
+                    <li id="dest1">1</li>
+                    <li id="dest2">2</li>
+                    <li id="dest3">3</li>
+                    <li id="dest4">4</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="textbox">
+            <div class="text"><p class="rere_01">내기 설정</p>
+                <p class="rere">초기화</p></div>
+            <div class="textbox_box">
+                <ul class="text_box01" id="text_box01">
+                    <li class="box01" id="box1">
+                        <span id="box_number1">1</span>
+                        <input type="text" name="text1" id="text1" style="margin-left: 3%">
+                    </li>
+                    <li class="box02" id="box2">
+                        <span id="box_number2">2</span>
+                        <input type="text" name="text2" id="text2" style="margin-left: 3%">
+                    </li>
+                </ul>
+
+                <ul class="text_box02" id="text_box02">
+                    <li class="box03" id="box3">
+                        <span id="box_number3">3</span>
+                        <input type="text" name="text3" id="text3" style="margin-left: 3%">
+                    </li>
+                    <li class="box04" id="box4">
+                        <span id="box_number4">4</span>
+                        <input type="text" name="text4" id="text4" style="margin-left: 3%">
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="footer">
+                <p>Copyright Ⓒ Meeteum - Son . All rights reserved.</p>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<script src="script/gamesetting_activity_script.js"></script>
+</body>
+</html>
