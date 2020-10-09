@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" content="text/html; charset=UTF-8">
+    <title>사다리 타기 게임</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+
+    <style>
+        .image_area {
+            text-align: center;
+            margin-top: 7%;
+            margin-bottom: 7%
+        }
+
+        .image {
+            width: 30%;
+        }
+
+        .text_area {
+            text-align: center;
+        }
+
+        .text_area span {
+            font-size: 5vw;
+            color: #666;
+            font-family: 'Jua', sans-serif;
+        }
+
+        .button {
+            margin-top: 10%;
+            margin-bottom: 25%;
+            text-align: center;
+        }
+
+        .button span {
+            border: 1px solid #666;
+            padding: 2%;
+            border-radius: 4%;
+            font-size: 1.5em;
+            box-shadow: #666 2.5px 3px;
+            font-family: 'Jua', sans-serif;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<form action="/start" method="post">
+    <div class="image_area">
+        <img src="../img/favicon.png" class="image">
+    </div>
+
+    <div class="text_area">
+        <span>귀여운 동물</span>
+        <br>
+        <span>사다리 타러 가기</span>
+    </div>
+
+
+    <div class="ladder" id="ladder_body">
+        <div class="button">
+            <span class="button_text">START</span>
+        </div>
+    </div>
+</form>
+
+<script>
+    $(document).ready(function () {
+        let formObj = $("form");
+
+        $(".button_text").on("click", function (e) {
+            formObj.attr("action", "/start").attr("method", "get");
+            formObj.submit();
+        });
+    });
+</script>
+</body>
+</html>
