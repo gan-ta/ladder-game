@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 $(function(){
     var form = {
-        userNum : count
+        userCount: count
     }
     $.ajax({
         url: "/start/setting",
@@ -101,7 +101,7 @@ minus.addEventListener('click',()=>{
             "2명 미만으로 설정할 수 없습니다.");
     }
     var form = {
-        userNum : count
+        userCount : count
     }
     $.ajax({
         url: "/start/setting",
@@ -167,7 +167,7 @@ plus.addEventListener('click',()=>{
             "2명 초과로 설정할 수 없습니다.");
     }
     var form = {
-        userNum : count
+        userCount : count
     }
     $.ajax({
         url: "/start/setting",
