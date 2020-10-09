@@ -86,14 +86,9 @@ $(function(){
 
     }
 
-
-    var form = {
-        userCount : count
-    }
     $.ajax({
         url: "/create/ladder",
         type: "POST",
-        data: form,
         dataType : 'json',
         async : false,
         success: function(data){
@@ -115,7 +110,7 @@ $(function(){
         let resultId = 'result' + (i+1).toString();
 
         document.getElementById(resultId).value = destination.toString();
-
+        console.log(destination.toString());
     }
 
 
@@ -233,7 +228,6 @@ $(function(){
 
 /*
  *사다리를 만드는 작업
- * @Param : 컨트롤러에서 임의의 사다리에 대한 정보
  */
 function createLadder(data){
     let canvas = document.getElementById("paper"),

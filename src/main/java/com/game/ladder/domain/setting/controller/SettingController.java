@@ -13,11 +13,11 @@ import javax.servlet.http.HttpSession;
 public class SettingController {
     @GetMapping("/start")
     public String getStartGame(HttpServletRequest request){
-        return "gamesetting_activity";
+        return "game_setting_activity";
     }
 
     @PostMapping("/start")
-    public String postStartGame(HttpServletRequest request){return "gamesetting_activity";}
+    public String postStartGame(HttpServletRequest request){return "game_setting_activity";}
 
     @PostMapping("/start/setting")
     @ResponseBody

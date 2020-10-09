@@ -8,7 +8,13 @@ let destNum = '';
 let insertCanvas = '';
 
 $(document).ready(function(){
+    inputInitialize()
     let formObj = $("form");
+
+    document.getElementById("text1").value = '';
+    document.getElementById("text2").value = '';
+    document.getElementById("text3").value = '';
+    document.getElementById("text4").value = '';
 
    $(".button_text").on("click",function (e) {
        if(count === 4){
@@ -47,6 +53,13 @@ $(document).ready(function(){
 
    });
 });
+
+function inputInitialize(){
+    document.getElementById("text1").value = '';
+    document.getElementById("text2").value = '';
+    document.getElementById("text3").value = '';
+    document.getElementById("text4").value = '';
+}
 
 $(function(){
     var form = {

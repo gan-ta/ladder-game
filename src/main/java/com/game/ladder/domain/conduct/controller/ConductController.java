@@ -24,21 +24,15 @@ public class ConductController {
 
     private final ConductGetService conductGetService;
 
-    @PostMapping("/userCount")
-    @ResponseBody
-    public String settingNext(HttpServletRequest request){
-        return String.valueOf(request.getSession().getAttribute("userCount"));
-    }
-
     @PostMapping("/create/ladder")
     @ResponseBody
-    public List<LadderInfoDto> simulateLadder(@RequestParam("userCount") int userCount){
-        return conductGetService.getLadderInformation(userCount);
+    public List<LadderInfoDto> simulateLadder(HttpServletRequest request){
+        return conductGetService.getLadderInformation(request.getSession());
     }
 
     @PostMapping("start/next")
-    public ModelAndView action(@RequestParam Map<String, String> params, Model model,HttpServletRequest request){
-        return conductCreateService.conductViewCreate(params,model,request.getSession());
+    public ModelAndView action(@RequestParam Map<String, String> params,HttpServletRequest request){
+        return conductCreateService.conductViewCreate(params,request.getSession());
     }
 
 }

@@ -259,9 +259,9 @@
 
             <div class="line"></div>
 
-            <div id = "invisible" style = "display:none">
-                <input id="userCount" name="userCount" type="text" th:value = "*{userCount}"/>
-            </div>
+<!--            <div id = "invisible" style = "display:none">-->
+<!--                <input id="userCount" name="userCount" type="text" th:value = "*{userCount}"/>-->
+<!--            </div>-->
 
             <div id = "invisible_result1" style = "display:none">
                 <input id=result1 name="result1" type="text"/>
@@ -276,7 +276,7 @@
             </div>
 
             <div id = "invisible_result4" style = "display:none">
-                <input id="result4" name="result4" type="text" th:value = "*{userCount}"/>
+                <input id="result4" name="result4" type="text"/>
             </div>
 
             <div class="textbox" th:object = "${setting}">
@@ -304,14 +304,10 @@
                         </li>
                     </ul>
                 </div>
-
-                <div class="footer">
-                    <p>Copyright Ⓒ Meeteum - Son . All rights reserved.</p>
-                </div>
             </div>
         </div>
     </form>
 
-   <script src="../script/conductgame_activity_script.js"></script>
+   <script src="../script/game_conduct_activity_script.js"></script>
 </body>
 </html>
