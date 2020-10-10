@@ -11,80 +11,224 @@
 
 <style>
     *{box-sizing: border-box;}
-    
-    .wrap{width: 90%; height: 90%; margin: auto;}
-    @media all and (min-width:360px) {
-    
-    .wrap h2{text-align: center; font-size:3vw;
-        margin-top: 5%; color: #555; font-family: 'Jua', sans-serif; }
-        
-       
-        .wrap02{display: flex;}    
-        
-        .wrap02 .img_list{flex: 30;}
-        .wrap02 .button_list{flex: 70;}
-        .wrap02 ul{list-style-type: none;
-   padding: 0;}
-        
-        
-        .wrap02 .img_list ul img{width: 65%;}
-        .wrap02 .img_list ul{ text-align: center;}
-        .wrap02 .img_list li{ padding-bottom: 8%;}
-        
- 
-        .wrap02 .box01{ border: solid 2px; border-radius: 10px;width: 90%; height: 18%; padding-top: 2%;
-        margin-top: 6%; margin-bottom: 6%; font-family: 'Jua', sans-serif; color:#666; font-size: 10vw; text-align:center;}
-             
-        .wrap02 .box02{ border: solid 2px; border-radius: 10px; width: 90%; height: 18%; padding-top: 2%; font-family: 'Jua', sans-serif; color:#666;
-        margin-bottom: 8%; font-size: 10vw; text-align:center;}
 
-        .wrap02 .box03{ border: solid 2px; border-radius: 10px;width: 90%; height: 18%;padding-top: 2%; font-family: 'Jua', sans-serif; color:#666;
-        margin-bottom: 10%; font-size: 10vw; text-align:center;}
-         
-        .wrap02 .box04{  border: solid 2px; border-radius: 10px;width: 90%; height: 18%; padding-top: 2%; font-family: 'Jua', sans-serif; color:#666;
-        font-size: 10vw;text-align:center;}
-    
-        
-    .textbox li{font-family: 'Jua', sans-serif; color:#666; font-weight: bold;}
-    .textbox .text{flex: 2; display: flex; margin-bottom: -2%; }
-    .textbox .text p{font-family: 'Jua', sans-serif;}
-    .textbox .text .rere_01{ font-size: 1.3rem; padding-left: 3.5%; width: 30%; text-align:left; color:#333;}
-
-
-        .textbox .text_box01{display: flex; list-style-type: none; margin-bottom: 5%;
-            padding-left: 0; text-align: center;}
-    .textbox .text_box01 .box1{flex: 2;}
-    .textbox .text_box01 .box2{flex: 2;}
-        .textbox .text_box02{display: flex; list-style-type: none; padding-left: 0;
-            text-align: center;}
-    .textbox .text_box02 .box3{flex: 2;}
-    .textbox .text_box02 .box4{flex: 2;}
-    
-    
-  
-    input{width: 80%; height: 150%; font-family: 'Jua', sans-serif;color: #666;border: solid 2px; border-radius: 10px;text-align :center;  font-size: 2vw;}
-
-    .wrap .footer{text-align: center; padding-top: 1%;
-    padding-bottom: 1%; font-size: 0.8rem; color: #666;}
-        
-    
-        .wrap .line{border-bottom: 3px dashed #999; 
-         margin: auto;}
-        .wrap .line_box{width: inherit; margin: auto; height: 70%; display: flex; padding-top: 2.5%;
-        padding-bottom: 2.5%; justify-content: flex-end;padding-right: 3%;}
-        
-        .wrap .line_box .button_51{ width: 25%; line-height:3; text-align: center;border: 1.5px solid #666; border-radius: 3%; font-size: 1rem;color: #666; font-family: 'Jua', sans-serif; box-shadow: 2px 3px #999;}
-
-        .button_51:hover{background-color: skyblue;cursor: pointer;}
+    body{
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 
-    .footer{
+    input{
+        width: 80%;
+        height: 150%;
+        font-family: 'Jua', sans-serif;
+        color: #666;
+        border: solid 2px;
+        border-radius: 10px;
+        text-align :center;
         font-size: 2vw;
-        margin : auto;
-        text-align: center;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        color: #666666;
+    }
+
+    @media all and (min-width:360px) {
+        .wrap{
+            width: 90%;
+            height: 90%;
+            margin: auto;
+        }
+    
+        .wrap h2{
+            text-align: center;
+            font-size:3vw;
+            margin-top: 5%;
+            color: #555;
+            font-family: 'Jua', sans-serif;
+        }
+
+        .wrap02{
+            display: flex;
+        }
+        
+        .wrap02 .img_list{
+            flex: 30;
+        }
+
+        .wrap02 .button_list{
+            flex: 70;
+        }
+
+        .wrap02 ul{
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .wrap02 .img_list ul img{
+            width: 65%;
+        }
+
+        .wrap02 .img_list ul{
+            text-align: center;
+        }
+
+        .wrap02 .img_list li{
+            padding-bottom: 8%;
+        }
+
+        .wrap02 .box01{
+            border: solid 2px;
+            border-radius: 10px;
+            width: 90%;
+            height: 18%;
+            padding-top: 2%;
+            margin-top: 6%;
+            margin-bottom: 6%;
+            font-family: 'Jua', sans-serif;
+            color:#666;
+            font-size: 10vw;
+            text-align:center;
+        }
+             
+        .wrap02 .box02{
+            border: solid 2px;
+            border-radius: 10px;
+            width: 90%;
+            height: 18%;
+            padding-top: 2%;
+            font-family: 'Jua', sans-serif;
+            color:#666;
+            margin-bottom: 8%;
+            font-size: 10vw;
+            text-align:center;
+        }
+
+        .wrap02 .box03{
+            border: solid 2px;
+            border-radius: 10px;
+            width: 90%;
+            height: 18%;
+            padding-top: 2%;
+            font-family: 'Jua', sans-serif;
+            color:#666;
+            margin-bottom: 10%;
+            font-size: 10vw;
+            text-align:center;
+        }
+         
+        .wrap02 .box04{
+            border: solid 2px;
+            border-radius: 10px;
+            width: 90%;
+            height: 18%;
+            padding-top: 2%;
+            font-family: 'Jua', sans-serif;
+            color:#666;
+            font-size: 10vw;
+            text-align:center;
+        }
+
+        .textbox li{
+            font-family: 'Jua', sans-serif;
+            color:#666;
+            font-weight: bold;
+        }
+
+
+        .textbox .text{
+            flex: 2;
+            display: flex;
+            margin-bottom: -2%;
+        }
+
+        .textbox .text p{
+            font-family: 'Jua', sans-serif;
+        }
+
+        .textbox .text .rere_01{
+            font-size: 1.3rem;
+            padding-left: 3.5%;
+            width: 30%;
+            text-align:left;
+            color:#333;
+        }
+
+        .textbox .text_box01{
+            display: flex;
+            list-style-type: none;
+            margin-bottom: 5%;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .textbox .text_box01 .box1{
+            flex: 2;
+        }
+
+        .textbox .text_box01 .box2{
+            flex: 2;
+        }
+
+        .textbox .text_box02{
+            display: flex;
+            list-style-type: none;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .textbox .text_box02 .box3{
+            flex: 2;
+        }
+
+        .textbox .text_box02 .box4{
+            flex: 2;
+        }
+
+        .wrap .footer{
+            text-align: center;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .wrap .line{
+            border-bottom: 3px dashed #999;
+            margin: auto;
+        }
+
+        .wrap .line_box{
+            width: inherit;
+            margin: auto;
+            height: 70%;
+            display: flex;
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            justify-content: flex-end;
+            padding-right: 3%;
+        }
+        
+        .wrap .line_box .button_51{
+            width: 25%;
+            line-height:3;
+            text-align: center;
+            border: 1.5px solid #666;
+            border-radius: 3%;
+            font-size: 1rem;
+            color: #666;
+            font-family: 'Jua', sans-serif;
+            box-shadow: 2px 3px #999;
+        }
+
+        .button_51:hover{
+            background-color: skyblue;
+            cursor: pointer;
+        }
+
+        .footer{
+            font-size: 2vw;
+            margin : auto;
+            text-align: center;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            color: #666666;
+        }
     }
     
 </style>
