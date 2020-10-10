@@ -110,7 +110,6 @@ $(function(){
         let resultId = 'result' + (i+1).toString();
 
         document.getElementById(resultId).value = destination.toString();
-        console.log(destination.toString());
     }
 
 
