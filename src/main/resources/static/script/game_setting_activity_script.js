@@ -19,10 +19,10 @@ $(document).ready(function(){
    $(".button_text").on("click",function (e) {
        if(count === 4){
            if(document.getElementById("text1").value ==='' || document.getElementById("text2").value ===''){
-               alert("내기값을 채워주세요");
+               alert("내기를 설정해주세요");
            }
            else if(document.getElementById("text3").value ==='' ||document.getElementById("text4").value ===''){
-               alert("내기값을 채워주세요");
+               alert("내기를 설정해주세요");
            }
            else{
                formObj.attr("action", "/start/next").attr("method","post");
@@ -31,10 +31,10 @@ $(document).ready(function(){
        }
        if(count === 3){
            if(document.getElementById("text1").value ===''){
-               alert("내기값을 채워주세요");
+               alert("내기를 설정해주세요");
            }
            else if(document.getElementById("text3").value ==='' ||document.getElementById("text4").value ===''){
-               alert("내기값을 채워주세요");
+               alert("내기를 설정해주세요");
            }
            else{
                formObj.attr("action", "/start/next").attr("method","post");
@@ -43,7 +43,7 @@ $(document).ready(function(){
        }
        if(count === 2){
            if(document.getElementById("text1").value ==='' ||document.getElementById("text2").value ===''){
-               alert("내기값을 채워주세요");
+               alert("내기를 설정해주세요");
            }
            else{
                formObj.attr("action", "/start/next").attr("method","post");
@@ -110,8 +110,7 @@ minus.addEventListener('click',()=>{
         document.getElementById('destination_list').innerHTML = destNum;
     }
     else{
-        alert("인원은 2~4명까지 설정이 가능합니다.\n" +
-            "2명 미만으로 설정할 수 없습니다.");
+        alert("인원은 2~4명까지 설정이 가능합니다.");
     }
     var form = {
         userCount : count
@@ -176,8 +175,7 @@ plus.addEventListener('click',()=>{
         document.getElementById('destination_list').innerHTML = destNum;
     }
     else{
-        alert("인원은 2~4명까지 설정이 가능합니다.\n" +
-            "2명 초과로 설정할 수 없습니다.");
+        alert("인원은 2~4명까지 설정이 가능합니다.");
     }
     var form = {
         userCount : count

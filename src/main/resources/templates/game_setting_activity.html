@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8" content="text/html; charset=UTF-8">
     <title>사다리 타기 게임</title>
-    <!--    추가로 넣어준 사항-->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <meta name="viewport"
           content="width=device-width, initial-scale=1, minimun-scale=1, maximum-scale=1, user-scalable=no">
@@ -29,18 +28,9 @@
             .button_list ul{list-style-type: none; display: flex;
                 margin: auto; width: 100%;}
             .button_list ul li{ text-align: center; border: 2px solid #666; width: 20%; border-radius:50%;  line-height:6; font-size: 3vw; font-family: 'Jua', sans-serif; font-weight: bold; color: #666; justify-content: space-around; margin: 2%;}
-
-            /*input 태그로 수정하여 작업을 진행함 */
-            .button_text:hover{background-color: #ff9999;}
+            .button_text:hover{background-color: #ff9999;cursor: pointer;}
             .button_text{ width: 20%; border: 1px solid; line-height: 3;}
 
-
-            .ladder_paper{
-                width:93%;
-                height:100%;
-                display: flex;
-                position: relative;
-            }
             .textbox{margin-top: 12%;}
             .textbox li{font-family: 'Jua', sans-serif; font-weight: bold; color:#666; }
             .textbox .text{flex: 2; display: flex; margin-bottom: -2%; }
@@ -49,7 +39,7 @@
             .textbox .text .rere{ margin-left: 1%; padding: 1%; border: 1px solid #999; border-radius: 3%; margin-left: 42%; width: 20%; text-align: center;
                 font-size: 1rem;color: #666; height: 12%; box-shadow: #999 2.5px 3px;}
 
-            .textbox .text .rere:hover{background-color: #66cc99;}
+            .textbox .text .rere:hover{background-color: #66cc99;cursor: pointer;}
 
 
             .textbox .text_box01{display: flex; list-style-type: none; margin-bottom: 5%;
@@ -62,12 +52,10 @@
             .textbox .text_box02 .box04{flex: 2; font-family: 'Jua', sans-serif; text-align: -moz-center;}
 
 
-            /*.textbox_box{width: 90%; height: auto; padding-left: 5%}*/
             input{width: 80%; height: 150%; border: dashed 1px #666; border-radius: 3%;}
             .wrap .footer{text-align: center; padding-top: 1%;padding-bottom: 1%; font-size: 0.8rem; color: #666;}
 
             .wrap .icon .icon_ul{list-style-type: none;margin-top: 5%; height: 100px; margin-bottom: 5%; width: 1000px}
-            .wrap .icon .description_ul{list-style-type: none; }
             .wrap .icon img{width: 4vw;}
             .wrap .icon ul li{display: inline; padding-right: 2%}
             .icon_05{font-size: 5vw; color: #666; font-family: 'Jua', sans-serif;}
@@ -75,10 +63,18 @@
             .icon {background: #ffffff; width: 160px; font-size: 3vw;height: 50px}
             .icon ul{padding-bottom: 3%}
             .icon ul{padding-left: 0;}
-            .icon_description{font-size: 1vw; color: #666; font-family: 'Jua', sans-serif;}
-            .wrap .button_next{text-align: center; margin-bottom: 20%}
-            .wrap .button_next span{border: 1px solid #666; padding: 1%; border-radius: 4%; font-size:1vw;box-shadow: #666 2.5px 1px; font-family: 'Jua', sans-serif; color: #666; }
-            .button_text_next:hover{background-color: #ffcc00;}
+            /*.wrap .button_next{text-align: center; margin-bottom: 20%}*/
+            .wrap .button_next span{
+                text-align: center;
+                margin-bottom: 20%;
+                border: 1px solid #666;
+                padding: 1%;
+                border-radius: 4%;
+                font-size:1vw;
+                box-shadow: #666 2.5px 1px;
+                font-family: 'Jua', sans-serif;
+                color: #666;
+            }
 
         }
 
@@ -89,6 +85,23 @@
             border-radius: 10px;
             text-align: center;
             font-size: 2vw;
+        }
+
+        .footer{
+            font-size: 2vw;
+            margin : auto;
+            text-align: center;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            color: #666666;
+        }
+
+        .plus:hover{
+            cursor: pointer;
+        }
+
+        .minus:hover{
+            cursor: pointer;
         }
     </style>
 </head>
@@ -163,6 +176,10 @@
 
             </div>
         </div>
+    </div>
+
+    <div class="footer">
+        Copyright Ⓒ Meeteum - Son And Heesup - Kim . All rights reserved.
     </div>
 </form>
 
