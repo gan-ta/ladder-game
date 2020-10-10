@@ -8,6 +8,10 @@
     <link rel="shortcut icon" href="img/favicon.png">
 
     <style>
+        .wrap{
+            margin: auto;
+        }
+
         .image_area {
             text-align: center;
             margin-top: 30%;
@@ -43,27 +47,48 @@
             font-family: 'Jua', sans-serif;
             color: #666;
         }
+
+        .footer{
+            font-size: 2vw;
+            margin : auto;
+            text-align: center;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            color: #666666;
+        }
+
+        .button_text:hover{
+            background-color: #ff9999;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
+<div class = "wrap">
 <form action="/start" method="post">
-    <div class="image_area">
-        <img src="../img/favicon.png" class="image">
-    </div>
-
-    <div class="text_area">
-        <span>귀여운 동물</span>
-        <br>
-        <span>사다리 타러 가기</span>
-    </div>
-
-
-    <div class="ladder" id="ladder_body">
-        <div class="button">
-            <span class="button_text">START</span>
+        <div class="image_area">
+            <img src="../img/favicon.png" class="image">
         </div>
-    </div>
-</form>
+
+        <div class="text_area">
+            <span>귀여운 동물</span>
+            <br>
+            <span>사다리 타러 가기</span>
+        </div>
+
+
+        <div class="ladder" id="ladder_body">
+            <div class="button">
+                <span class="button_text">START</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            Copyright Ⓒ Meeteum - Son And Heesup - Kim . All rights reserved.
+        </div>
+    </form>
+</div>
 
 <script>
     $(document).ready(function () {

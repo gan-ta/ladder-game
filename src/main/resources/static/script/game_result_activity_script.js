@@ -78,7 +78,7 @@ $(document).ready(function(){
     $('.button_51').on("click",function(e){
         e.preventDefault();
 
-        formObj.attr("action", "/").attr("method","post");
+        formObj.attr("action", "/start").attr("method","get");
         formObj.submit();
     });
 

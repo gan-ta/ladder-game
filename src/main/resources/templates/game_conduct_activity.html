@@ -15,7 +15,6 @@
         --animate-duration: 1s;
     }
 
-     /*{outline: solid 1px;}*/
     *{box-sizing: border-box;}
 
     .wrap{width: 90%; height: 90%; margin: auto;}
@@ -56,7 +55,6 @@
             padding-left: 7%;
         }
 
-        /*.justify-content:center; margin-bottom: 5%;}*/
         .button_list ul li {
             text-align: center;
             border: 2px solid #666;
@@ -193,10 +191,12 @@
 
         .button_50:hover {
             background-color: #ffcc00;
+            cursor: pointer;
         }
 
         .button_51:hover {
             background-color: skyblue;
+            cursor: pointer;
         }
 
 
@@ -221,6 +221,14 @@
         }
     }
 
+    .footer{
+        font-size: 2vw;
+        margin : auto;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        color: #666666;
+    }
 
 </style>
 </head>
@@ -258,10 +266,6 @@
             </div>
 
             <div class="line"></div>
-
-<!--            <div id = "invisible" style = "display:none">-->
-<!--                <input id="userCount" name="userCount" type="text" th:value = "*{userCount}"/>-->
-<!--            </div>-->
 
             <div id = "invisible_result1" style = "display:none">
                 <input id=result1 name="result1" type="text"/>
@@ -307,6 +311,10 @@
             </div>
         </div>
     </form>
+
+    <div class="footer">
+        Copyright Ⓒ Meeteum - Son And Heesup - Kim . All rights reserved.
+    </div>
 
    <script src="../script/game_conduct_activity_script.js"></script>
 </body>
