@@ -48,7 +48,7 @@
         .wrap h2 {
             text-align: center;
             font-size: 3vw;
-            margin-top: 5%;
+            margin-top: 10%;
             color: #555;
             font-family: 'Jua', sans-serif;
         }
@@ -71,6 +71,13 @@
             font-family: 'Jua', sans-serif;
             color: #666;
             font-weight: bold;
+        }
+
+        .ladder_paper {
+            width: 93%;
+            height: 100%;
+            display: flex;
+            position: relative;
         }
 
 
@@ -98,17 +105,11 @@
             color: #333;
         }
 
-        .ladder_paper {
-            width: 93%;
-            height: 100%;
-            display: flex;
-            position: relative;
-        }
-
         .textbox .text_box01 {
             display: flex;
             list-style-type: none;
             margin-bottom: 2%;
+            padding: 0;
         }
 
         .textbox .text_box01 .box1 {
@@ -122,6 +123,7 @@
         .textbox .text_box02 {
             display: flex;
             list-style-type: none;
+            padding:0;
         }
 
         .textbox .text_box02 .box3 {
@@ -280,6 +282,7 @@
             <div id = "invisible_result4" style = "display:none">
                 <input id="result4" name="result4" type="text"/>
             </div>
+
 
             <div class="textbox" th:object = "${setting}">
                 <div class="text"><p class="rere_01">내기 설정</p></div>
